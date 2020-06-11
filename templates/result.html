@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<!-- saved from url=(0133)file:///E:/github/my%20upload/end%20to%20end%20spam%20classifier/Spam-email-Classifier-Deployment-master/Spam%20email%20Detector.html -->
-<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
 		<title>Spam SMS Detector</title>
-		<link rel="shortcut icon" href="file:///E:/github/my%20upload/end%20to%20end%20spam%20classifier/Spam-email-Classifier-Deployment-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;spam-favicon.ico&#39;)%20%7D%7D">
-		<link rel="stylesheet" type="text/css" href="file:///E:/github/my%20upload/end%20to%20end%20spam%20classifier/Spam-email-Classifier-Deployment-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;styles.css&#39;)%20%7D%7D">
-		<script src="./Spam email fDetector_files/5f3f547070.js.download" crossorigin="anonymous"></script><link href="./Spam email fDetector_files/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="./Spam email fDetector_files/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="./Spam email fDetector_files/free.min.css" media="all" rel="stylesheet">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
 
 		<!-- Website Title -->
 		<div class="container">
-			<h2 class="container-heading"><span>Spam Detector</span> for Short Message Service (SMS)</h2>
-	        	<div class="description">
+			<h2 class='container-heading'><span>Spam Detector</span> for Short Message Service (SMS)</h2>
+	        	<div class='description'>
 				<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
 			</div>
 		</div>
@@ -21,14 +22,14 @@
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==1 %}
-				<h1>Prediction: <span class="danger">Gotcha! This is a SPAM EMAIL.</span></h1>
+				<h1>Prediction: <span class='danger'>Gotcha! This is a SPAM message.</span></h1>
 			{% elif prediction==0 %}
-				<h1>Prediction: <span class="safe">Great! This is NOT a SPAM EMAIL.</span></h1>
+				<h1>Prediction: <span class='safe'>Great! This is NOT a spam message.</span></h1>
 			{% endif %}
 		</div>
 
 		<!-- Footer -->
-        <div class="footer">
+        <div class='footer'>
             <div class="contact">
                 <a target="_blank" href="https://github.com/achuthasubhash/end-to-end-spam-classifier"><i class="fab fa-github fa-lg contact-icon" aria-hidden="true"></i></a>
                 <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i class="fab fa-linkedin fa-lg contact-icon" aria-hidden="true"></i></a>
